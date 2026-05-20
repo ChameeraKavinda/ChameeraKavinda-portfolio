@@ -29,7 +29,7 @@ const Hero = ({ resetKey }) => {
             }}
             initial="hidden"
             animate="visible"
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4"
+            className="text-text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4"
           >
 
             {/* Hi, I'm */}
