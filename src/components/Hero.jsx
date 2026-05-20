@@ -29,8 +29,7 @@ const Hero = ({ resetKey }) => {
             }}
             initial="hidden"
             animate="visible"
-            className="text-text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4"
-          >
+className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4"          >
 
             {/* Hi, I'm */}
             {"Hi, I'm ".split("").map((char, index) => (
