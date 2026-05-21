@@ -15,7 +15,7 @@ A fully responsive and interactive personal portfolio built using modern fronten
 
 ## 🌐 Live Demo
 
-🔗 https://your-live-link.com
+🔗 [https://your-live-link.com](https://chameerakavindacom.vercel.app/)
 
 ---
 
