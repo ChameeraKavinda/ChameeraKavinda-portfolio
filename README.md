@@ -128,7 +128,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/your-repository-name.git
+git clone https://github.com/ChameeraKavinda/ChameeraKavinda-portfolio.git
 ```
 
 Move into the project directory:
@@ -189,8 +189,8 @@ I enjoy learning modern technologies and building real-world software solutions.
 # 📬 Contact
 
 📧 your-senarathna.ck@gmail.com 
-💼 LinkedIn: https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/chameerakavinda/ 
-💻 GitHub: [https://github.com/yourusername](https://github.com/ChameeraKavinda/](https://github.com/ChameeraKavinda)
+💼 LinkedIn: (https://www.linkedin.com/in/chameerakavinda/ 
+💻 GitHub: (https://github.com/ChameeraKavinda/]
 
 ---
 
