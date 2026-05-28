@@ -42,7 +42,13 @@
 
 /* Glassmorphism Utilities */
 .glass {
-  @apply bg-card backdrop-blur-md border border-card-border shadow-xl;
+  @apply bg-slate-800/90 border border-slate-700 shadow-xl;
+}
+
+@media (min-width: 768px) {
+  .glass {
+    @apply bg-card backdrop-blur-md border border-card-border shadow-xl;
+  }
 }
 
 .gradient-text {
@@ -51,10 +57,15 @@
 
 @keyframes infinite-scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
   }
 
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(0);
   }
+}
+
+/* Hardware Acceleration */
+.will-change-transform {
+  will-change: transform;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GraduationCap, Award, Briefcase } from 'lucide-react';
 
@@ -162,4 +162,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default React.memo(Education);

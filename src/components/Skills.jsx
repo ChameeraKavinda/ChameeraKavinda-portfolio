@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import {
@@ -276,9 +277,9 @@ const Skills = () => {
     >
 
       {/* Glow Effects */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full"></div>
+      <div className="hidden md:block absolute top-0 left-0 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full"></div>
 
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 blur-3xl rounded-full"></div>
+      <div className="hidden md:block absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 blur-3xl rounded-full"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
 
@@ -428,4 +429,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default React.memo(Skills);

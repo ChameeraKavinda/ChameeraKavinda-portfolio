@@ -1,11 +1,12 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 
-import c1 from "../assets/pic/comfort.png";
-import c2 from "../assets/pic/book.png";
-import c3 from "../assets/pic/cab.jpg";
-import c4 from "../assets/pic/mindwell.png";
+import c1 from "../assets/pic/comfort.webp";
+import c2 from "../assets/pic/book.webp";
+import c3 from "../assets/pic/cab.webp";
+import c4 from "../assets/pic/mindwell.webp";
 
 const Projects = () => {
 
@@ -97,6 +98,8 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-contain p-2 transform group-hover:scale-110 transition-transform duration-700"
                   />
                 ) : (
@@ -171,4 +174,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default React.memo(Projects);

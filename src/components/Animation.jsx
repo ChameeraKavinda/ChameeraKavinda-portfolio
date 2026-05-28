@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
     FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs,
@@ -32,8 +33,8 @@ const Animation = () => {
     return (
         <section id="animation" className="pb-24 pt-4 bg-slate-900/50 relative overflow-hidden">
             {/* Subtle Background Blurs */}
-            <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="hidden md:block absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div className="hidden md:block absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10">
                 {/* Infinite Scroll Carousel Container */}
@@ -44,7 +45,7 @@ const Animation = () => {
                         WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
                     }}
                 >
-                    <div className="flex w-max animate-[infinite-scroll_35s_linear_infinite] hover:[animation-play-state:paused]">
+                    <div className="flex w-max animate-[infinite-scroll_35s_linear_infinite] hover:[animation-play-state:paused] will-change-transform">
                         {duplicatedSkills.map((item, idx) => (
                             <div
                                 key={idx}
@@ -74,4 +75,4 @@ const Animation = () => {
     );
 };
 
-export default Animation;
+export default React.memo(Animation);

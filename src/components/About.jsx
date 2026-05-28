@@ -1,5 +1,5 @@
 import { motion, useInView, animate } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import aboutMeImg from "../assets/aboutme.png";
 import cvFile from "../assets/pdf/ChameeraKavinda.pdf";
 
@@ -92,6 +92,8 @@ const About = () => {
               <img
                 src={aboutMeImg}
                 alt="About Me"
+                loading="lazy"
+                decoding="async"
                 className="w-64 h-auto object-contain mx-auto"
               />
             </div>
@@ -160,4 +162,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default React.memo(About);

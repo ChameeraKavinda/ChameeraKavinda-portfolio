@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Smartphone, Globe, Database, Server, PenTool } from 'lucide-react';
 
@@ -38,8 +39,8 @@ const Service = () => {
   return (
     <section id="services" className="py-24 relative overflow-hidden bg-slate-900/30">
       {/* Background Orbs */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
+      <div className="hidden md:block absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+      <div className="hidden md:block absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
@@ -78,4 +79,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default React.memo(Service);

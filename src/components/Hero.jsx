@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, ChevronDown } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -8,8 +9,8 @@ const Hero = ({ resetKey }) => {
     <section id="home" className="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
 
       {/* Background Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="hidden md:block absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="hidden md:block absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="container mx-auto px-6 md:px-12 z-10">
         <div className="flex flex-col items-center text-center">
@@ -150,4 +151,4 @@ className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

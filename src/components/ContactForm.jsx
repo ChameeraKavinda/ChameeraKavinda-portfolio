@@ -98,7 +98,7 @@ const ContactForm = () => {
             name="subject"
             required
             className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent"
-            placeholder="Project Inquiry"
+            placeholder="Enter Your Subject Here..."
           />
         </div>
 
