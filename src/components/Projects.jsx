@@ -23,10 +23,10 @@ const Projects = () => {
     },
 
     {
-      title: "Blanket Management System",
+      title: "ERP System for Inventory Management (Blankets)",
       description:
         "A blanket inventory and management system developed using C#, HTML, CSS, and JavaScript.",
-      tech: ["C#", "HTML", "CSS", "JAVASCRIPT"],
+      tech: [".Net", "HTML", "CSS", "JAVASCRIPT"],
       github: "https://github.com/ChameeraKavinda/Blanket-Mangement-System",
       live: "https://www.youtube.com/watch?v=CkVGT9qWk6A&t=545s",
       image: c1,
