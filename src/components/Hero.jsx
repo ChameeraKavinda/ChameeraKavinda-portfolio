@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Download, ChevronDown } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import cvFile from '../assets/pdf/ChameeraKavinda.pdf';
+import aboutmeImg from '../assets/about.png';
 
 const Hero = ({ resetKey }) => {
   return (
@@ -14,6 +15,28 @@ const Hero = ({ resetKey }) => {
 
       <div className="container mx-auto px-6 md:px-12 z-10">
         <div className="flex flex-col items-center text-center">
+
+          {/* PROFILE IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+            className="mb-6 md:mb-8 relative"
+          >
+            <motion.div
+              animate={{ y: [-8, 8, -8] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-purple-500 to-accent shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+            >
+              <div className="w-full h-full bg-slate-900 rounded-full p-1">
+                <img
+                  src={aboutmeImg}
+                  alt="Chameera Kavinda"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
 
           {/* HERO TITLE */}
           <motion.h1
@@ -30,7 +53,7 @@ const Hero = ({ resetKey }) => {
             }}
             initial="hidden"
             animate="visible"
-className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4"          >
+            className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-extrabold tracking-tight mb-4"          >
 
             {/* Hi, I'm */}
             {"Hi, I'm ".split("").map((char, index) => (

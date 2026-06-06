@@ -81,7 +81,7 @@ const Education = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.5 }}
           className="mb-12 text-center"
         >
@@ -120,7 +120,7 @@ const Education = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30, scale: 0.95 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: false, margin: "-50px" }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
                   className={`relative flex flex-col md:flex-row items-center w-full mb-12 md:mb-20 ${isEven ? "md:flex-row-reverse" : ""
                     }`}
