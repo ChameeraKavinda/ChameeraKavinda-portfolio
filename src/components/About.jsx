@@ -7,7 +7,7 @@ import cvFile from "../assets/pdf/ChameeraKavinda.pdf";
 const Counter = ({ from, to, duration = 2, suffix = "" }) => {
   const [count, setCount] = useState(from);
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const inView = useInView(ref, { once: false, margin: "-50px" });
 
   useEffect(() => {
     if (inView) {
@@ -68,7 +68,7 @@ const About = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
@@ -84,17 +84,22 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative p-1 rounded-2xl bg-gradient-to-tr from-[#2C6EEA] to-accent shadow-[0_0_30px_rgba(44, 110, 234)] group"
           >
-            <div className="w-full h-full flex items-end justify-center relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 pt-4 px-4 border border-slate-700 rounded-2xl">
+            <div className="w-full h-full flex items-end justify-center relative overflow-hidden bg-slate-900 pt-4 px-4 rounded-[14px]">
+
+              {/* Internal Glow Effects */}
+              <div className="absolute top-[-50px] right-[-50px] w-40 h-40 bg-accent/30 blur-[50px] rounded-full z-0 transition-all duration-500 group-hover:bg-accent/50"></div>
+              <div className="absolute bottom-[-50px] left-[-50px] w-40 h-40 bg-purple-500/30 blur-[50px] rounded-full z-0 transition-all duration-500 group-hover:bg-purple-500/50"></div>
+
               <img
                 src={aboutMeImg}
                 alt="About Me"
                 loading="lazy"
                 decoding="async"
-                className="w-64 h-auto object-contain mx-auto"
+                className="w-64 h-auto object-contain mx-auto relative z-10 transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </motion.div>
@@ -103,7 +108,7 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-3xl font-bold mb-6 text-white">
@@ -114,16 +119,36 @@ const About = () => {
             </h3>
 
             <div className="space-y-6 text-gray-300 text-lg">
-              <p>
-                I am a motivated Software Engineer with a strong passion for building modern software solutions and full-stack applications.
-              </p>
+              <div className="space-y-6 text-gray-300 text-lg">
 
-              <p>
-                I specialize in React, Laravel, .NET, and modern UI design. My goal is to create clean, scalable, and impactful digital solutions.
-              </p>
-              <p>
-                As a freelance software developer, I have worked with clients to design and develop user-friendly solutions while strengthening my problem-solving, teamwork, and communication skills. I am also highly interested in Artificial Intelligence and continuously explore new technologies to expand my knowledge and build impactful digital experiences.
-              </p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  I am a motivated Software Engineer with a strong passion for building modern software solutions and full-stack applications.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                >
+                  I specialize in React, Laravel, .NET, and modern UI design. My goal is to create clean, scalable, and impactful digital solutions.
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  As a freelance software developer, I have worked with clients to design and develop user-friendly solutions while strengthening my problem-solving, teamwork, and communication skills.
+                </motion.p>
+
+              </div>
             </div>
 
             {/* BUTTON REPLACED HERE */}
